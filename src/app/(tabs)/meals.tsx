@@ -1,6 +1,7 @@
 import MealItem from "@/components/MealItem";
 import { clearAllMeals, getMeals, Meal } from "@/storage/meals";
 import { globalStyles } from "@/styles/global";
+import * as Haptics from "expo-haptics";
 import { useFocusEffect } from "expo-router";
 import { useCallback, useState } from "react";
 import { Alert, ScrollView, Text, TouchableOpacity, View } from "react-native";
@@ -21,6 +22,7 @@ export default function AllMealsScreen() {
         style: "destructive",
         onPress: async () => {
           await clearAllMeals();
+          Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
           loadMeals();
         },
       },
