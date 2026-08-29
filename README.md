@@ -1,56 +1,103 @@
-# Welcome to your Expo app 👋
+# MacroZone 🥗💪
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**MacroZone** is a sleek, modern React Native & Expo mobile application designed for effortless daily nutrition and macronutrient tracking. Track your daily intake of Calories, Protein, Carbs, and Fat with an intuitive dark-themed interface, instant haptic feedback, and local offline storage.
 
-## Get started
+---
 
-1. Install dependencies
+## 📱 App Screenshots
 
+<div align="center">
+  <img src="assets/projectPreview/home.PNG" height="550" alt="Home Dashboard" style="margin: 0 12px; border-radius: 12px;" />
+  <img src="assets/projectPreview/add-meal.PNG" height="550" alt="Add Meal Screen" style="margin: 0 12px; border-radius: 12px;" />
+  <img src="assets/projectPreview/All-meals.PNG" height="550" alt="All Meals Screen" style="margin: 0 12px; border-radius: 12px;" />
+</div>
+
+---
+
+## ✨ Features
+
+- **📊 Dynamic Macro Dashboard**: Track daily intake against target goals:
+  - 🔴 **Calories**: Target ~ 2,000 kcal
+  - 🔵 **Protein**: Target ~ 150g
+  - 🟡 **Carbs**: Target ~ 250g
+  - 🟢 **Fat**: Target ~ 65g
+- **➕ Easy Meal Logging**: Quickly log meal details including meal name, calories, protein, carbs, and fat with real-time input validation.
+- **📋 Recent & Full Meal History**:
+  - View your 5 most recent meals directly on the homepage.
+  - Explore complete meal history on the **All Meals** tab.
+  - **Long Press to Delete**: Tap and hold any meal item to delete it with a confirmation prompt.
+  - **Clear All**: Bulk clear all logged meals with a single tap.
+- **📤 Copy & Share Summaries**:
+  - **Copy Summary**: Instantly format and copy daily totals to clipboard.
+  - **Share Summary**: Share your daily nutritional breakdown via native system share menu.
+- **📳 Haptic Feedback**: Tactile responses powered by `expo-haptics` for actions like adding/deleting meals and copying data.
+- **🔔 Meal Reminders**: Built-in daily reminder notifications (Lunch & Dinner) to help stay on track.
+- **💾 Offline-First Local Storage**: All data is saved locally on device using `@react-native-async-storage/async-storage` for speed, privacy, and offline accessibility.
+- **🌙 Dark UI Design**: Clean, high-contrast dark theme optimized for mobile screens.
+
+---
+
+## 🛠 Tech Stack
+
+- **Framework**: [Expo](https://expo.dev) (v57) & [React Native](https://reactnative.dev)
+- **Language**: TypeScript
+- **Routing**: [Expo Router](https://docs.expo.dev/router/introduction) (File-based navigation)
+- **State & Storage**: React Hooks & `@react-native-async-storage/async-storage`
+- **UI & UX**: `@expo/vector-icons`, `expo-haptics`, custom responsive dark theme
+- **Notifications**: `expo-notifications`
+- **Utilities**: `expo-clipboard`
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Ensure you have [Node.js](https://nodejs.org/) installed.
+
+### Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Imtiaz-Ali17314/Macrozone.git
+   cd Macrozone
+   ```
+
+2. **Install dependencies**:
    ```bash
    npm install
    ```
 
-2. Start the app
-
+3. **Start the development server**:
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+4. **Run on device/emulator**:
+   - Press `a` for Android Emulator
+   - Press `i` for iOS Simulator
+   - Scan QR code with Expo Go app (Android/iOS)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📁 Project Structure
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```text
+Macrozone/
+├── assets/             # Project assets & preview screenshots
+│   └── projectPreview/ # Screenshots used in documentation
+├── src/
+│   ├── app/            # Expo Router file-based screens ((tabs), layouts)
+│   ├── components/     # Reusable UI components (MacroCard, MealItem, etc.)
+│   ├── storage/        # AsyncStorage helpers for meal management
+│   ├── styles/         # Global color palettes and shared styles
+│   └── utils/          # Notifications & helper functions
+├── package.json
+└── tsconfig.json
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-### Other setup steps
+## 📄 License
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+This project is licensed under the [MIT License](LICENSE).
